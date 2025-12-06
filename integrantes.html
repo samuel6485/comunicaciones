@@ -1,0 +1,135 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Integrantes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- boostrap  *SOLO* para iconos en el footer-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="imagenes.img/logo.jfif" class="logo">
+        <h1>Integrantes del Equipo</h1>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="tematica.html">Temática</a>
+            <a href="integrantes.html" id="btnIntegrantes">Integrantes</a>
+
+            <a href="evidencias.html">Evidencias</a>
+            <a href="reflexiones.html">Reflexiones</a>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN DE ABANICO -->
+    <section class="integrantes-section">
+
+        <!-- Integrante samuel  -->
+        <div class="card-stack" data-img="imagenes.img/WhatsApp Image 2025-12-05 at 5.13.28 PM.jpeg"
+            data-nombre="David Franco"
+            data-descripcion="Es una persona tranquila y respetuosa, de mente abierta y con muhcas disposicion para aprender y que se toma las criticas de la mejor manera por que las ve como una posibilidad de mejora y crecimiento personal">
+            <img src="imagenes.img/WhatsApp Image 2025-12-05 at 5.13.28 PM.jpeg" alt="Samuel">
+        </div>
+
+        <!-- Integrante pablo  -->
+        <div class="card-stack" data-img="imagenes.img/pablo.jpeg" data-nombre="Juan Pablo Giraldo "
+            data-descripcion="Es una persona respetuosa, sincera, cuidadoso, estudia en el Sena y en una academia de inglés y trabaja en una empresa en la cual está cómodo,  juicio y tolerante, le encanta lo que estudia y le fascina aprender.">
+            <img src="imagenes.img/pablo.jpeg" alt="Samuel">
+        </div>
+        <!-- Integrante Duvan  -->
+        <div class="card-stack" data-img="imagenes.img/duvan.jpeg" data-nombre="Duvan Sierra Guzmán"
+            data-descripcion="Soy un estudiante de ADSO en el SENA, apasionado por la tecnología y el desarrollo de software. Me gusta trabajar en equipo y aprender nuevas habilidades que me permitan crecer profesionalmente">
+            <img src="imagenes.img/duvan.jpeg" alt="Duvan">
+        </div>
+
+    </section>
+
+    <!-- MODAL EMERGENTE -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="cerrar-modal" class="cerrar">&times;</span>
+            <img id="modal-img">
+            <h2 id="modal-nombre"></h2>
+            <p id="modal-descripcion"></p>
+        </div>
+    </div>
+
+
+    <!-- PÉTALOS SAKURA -->
+    <script>
+        function crearPetalo() {
+            const petal = document.createElement("div");
+            petal.classList.add("petal");
+            petal.style.left = Math.random() * window.innerWidth + "px";
+            petal.style.animationDuration = (5 + Math.random() * 3) + "s";
+            document.body.appendChild(petal);
+            setTimeout(() => petal.remove(), 8000);
+        }
+        setInterval(crearPetalo, 300);
+    </script>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const btnIntegrantes = document.querySelector("#btnIntegrantes");
+
+            if (btnIntegrantes) {
+                btnIntegrantes.addEventListener("click", (e) => {
+                    e.preventDefault(); // Detiene la navegación inmediata
+
+                    Swal.fire({
+                        icon: "info",
+                        title: "Integrantes",
+                        text: "Por favor selecciona un integrante para ver más detalles.",
+                        confirmButtonColor: "#6d0b45",
+                        confirmButtonText: "Entendido"
+                    }).then(() => {
+
+                        // Ahora sí redirige automáticamente
+                        window.location.href = "integrantes.html";
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
+
+
+
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="sociales" id="Contacto">
+
+
+            <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+
+        </div>
+
+        <p>&copy;2025 Todos los derechos reservados</p>
+    </footer>
+    <script src="js/java.js"></script>
+
+
+</body>
+
+</html>

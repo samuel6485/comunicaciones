@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reflexiones</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- boostrap  *SOLO* para iconos en el footer-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="imagenes.img/logo2.jfif" class="logo">
+        <h1>Reflexiones Finales</h1>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="tematica.html">Temática</a>
+            <a href="integrantes.html" id="btnIntegrantes">Integrantes</a>
+            <a href="evidencias.html">Evidencias</a>
+            <a href="reflexiones.html" class="active">Reflexiones</a>
+        </nav>
+    </header>
+
+    <section class="contenido">
+        <div class="reflexion">
+            <h3>David Franco</h3>
+            <p> La comunicación es muy importante para las personas y para la sociedad porque nos permite compartir lo
+                que pensamos, sentimos y queremos. Gracias a ella podemos trabajar juntos, generar confianza y
+                entendernos mejor. No se trata solo de decir cosas, sino de lograr que los demás realmente comprendan lo
+                que queremos expresar. Cuando comunicamos bien, podemos evitar problemas, mejorar nuestras relaciones y
+                trabajar de manera más fácil con otros; pero cuando nos comunicamos mal, puede ocurrir lo contrario.</p>
+        </div>
+        <br>
+        <div class="reflexion">
+            <h3>Duvan Sierra Guzman</h3>
+            <p>La comunicación asertiva no es solo una técnica; es un tipo de valentía.
+                Es la decisión de hablar con claridad sin destruir, de defender sin atacar y de escuchar sin rendirse.
+                Es una habilidad que no te regalan: la construyes paso a paso, equivocándote, quedándote callado cuando
+                no debías, hablando fuerte cuando no hacía falta, y aprendiendo a equilibrar lo que piensas con lo que
+                sientes.
+
+                En el camino de aprender a comunicarnos, nos cruzamos con diferentes formas de expresión. La pasiva, que
+                te hace invisible. La agresiva, que te vuelve un muro. Y la asertiva, que es como abrir una puerta desde
+                ambos lados: tú hablas, el otro habla, y en medio aparece un punto donde ambos pueden existir sin
+                anularse.
+
+                También descubrimos que la comunicación no siempre necesita palabras.
+                Un silencio puede decir más que un discurso. Un gesto puede revelar lo que la voz oculta. Los ojos, la
+                postura, la forma en la que respiramos cuando queremos decir algo importante… todo se convierte en
+                mensaje. Ese es el lenguaje que no se escribe, pero se siente.
+
+                La comunicación asertiva, cuando es real, no busca ganar discusiones.
+                Busca comprender. Busca equilibrio. Busca respeto, incluso cuando las ideas se chocan. Busca que lo que
+                decimos y lo que hacemos no se contradigan.
+                Es decir “sí” sin miedo, “no” sin culpa
+                y “esto es lo que siento” sin disfraz.</p>
+        </div>
+
+
+        <br>
+        <div class="reflexion">
+            <h3>Juan pablo Giraldo</h3>
+            <p>La com.</p>
+        </div>
+    </section>
+
+    <!-- PÉTALOS SAKURA -->
+    <script>
+        function crearPetalo() {
+            const petal = document.createElement("div");
+            petal.classList.add("petal");
+            petal.style.left = Math.random() * window.innerWidth + "px";
+            petal.style.animationDuration = (5 + Math.random() * 3) + "s";
+            document.body.appendChild(petal);
+            setTimeout(() => petal.remove(), 8000);
+        }
+        setInterval(crearPetalo, 300);
+    </script>
+
+
+    </div>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="sociales" id="Contacto">
+
+
+            <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+
+        </div>
+
+        <p>&copy;2025 Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const btnIntegrantes = document.querySelector("#btnIntegrantes");
+
+            if (btnIntegrantes) {
+                btnIntegrantes.addEventListener("click", (e) => {
+                    e.preventDefault(); // Detiene la navegación inmediata
+
+                    Swal.fire({
+                        icon: "info",
+                        title: "Integrantes",
+                        text: "Por favor selecciona un integrante para ver más detalles.",
+                        confirmButtonColor: "#6d0b45",
+                        confirmButtonText: "Entendido"
+                    }).then(() => {
+
+                        // Ahora sí redirige automáticamente
+                        window.location.href = "integrantes.html";
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

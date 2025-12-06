@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comunicación Asertiva - ADSO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- boostrap  *SOLO* para iconos en el footer-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Comunicación Asertiva en ADSO</h1>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="tematica.html">Temática</a>
+            <a href="integrantes.html" id="btnIntegrantes">Integrantes</a>
+            <a href="evidencias.html">Evidencias</a>
+            <a href="reflexiones.html">Reflexiones</a>
+        </nav>
+    </header>
+
+    <div>
+        <section class="contenido">
+            <h2>Introducción</h2>
+            <p>
+                La comunicación es el proceso mediante el cual las personas intercambian ideas,
+                información y emociones. En el campo del desarrollo de software es esencial para
+                la coordinación efectiva del equipo, la comprensión de los requisitos del cliente
+                y la prevención de errores.
+            </p>
+
+            <p>
+                Esta página recopila todo lo trabajado durante la formación, organizado de forma
+                profesional y dinámica para facilitar su lectura y comprensión.
+            </p>
+
+            <a href="tematica.html" class="btn">Ver Temática</a>
+            <a href="evidencias.html" class="btn">Ver Evidencias</a>
+        </section>
+
+        <!-- PÉTALOS SAKURA -->
+        <script>
+            function crearPetalo() {
+                const petal = document.createElement("div");
+                petal.classList.add("petal");
+                petal.style.left = Math.random() * window.innerWidth + "px";
+                petal.style.animationDuration = (5 + Math.random() * 3) + "s";
+                document.body.appendChild(petal);
+                setTimeout(() => petal.remove(), 8000);
+            }
+            setInterval(crearPetalo, 300);
+        </script>
+
+
+    </div>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="sociales" id="Contacto">
+
+
+            <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+
+        </div>
+
+        <p>&copy;2025 Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const btnIntegrantes = document.querySelector("#btnIntegrantes");
+
+            if (btnIntegrantes) {
+                btnIntegrantes.addEventListener("click", (e) => {
+                    e.preventDefault(); // Detiene la navegación inmediata
+
+                    Swal.fire({
+                        icon: "info",
+                        title: "Integrantes",
+                        text: "Por favor selecciona un integrante para ver más detalles.",
+                        confirmButtonColor: "#6d0b45",
+                        confirmButtonText: "Entendido"
+                    }).then(() => {
+
+                        // Ahora sí redirige automáticamente
+                        window.location.href = "integrantes.html";
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

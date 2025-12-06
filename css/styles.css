@@ -1,0 +1,534 @@
+/* ================================
+   HEADER RESPONSIVE
+================================ */
+header {
+    width: 100%;
+    padding: 8px 25px; /* ANTES: 20px 40px — AHORA más delgado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    background: rgba(255, 220, 240, 0.45);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 150, 210, 0.4); /* Línea más delgada */
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(255, 120, 180, 0.20); /* Sombra más suave */
+}
+
+header h1 {
+    color: #6d0b45;
+    font-size: 22px; /* ANTES: 28px */
+    font-weight: 700;
+    margin: 0;
+}
+
+
+/* NAVBAR EN FILA HORIZONTAL */
+.navbar {
+    display: flex;
+    justify-content: right;   
+    align-items: center;
+    gap: 20px;                 /* Espacio entre enlaces */
+    flex-wrap: nowrap;         /* Evita que se bajen a otra línea */
+    width: 100%;
+    padding: 10px 0;
+}
+
+
+.navbar a {
+    color: #6d0b45;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255, 150, 210, 0.25);
+    color: #ff2ba9;
+}
+
+.navbar a.active {
+    background: rgba(255, 120, 200, 0.6);
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 120, 200, 0.4);
+}
+
+/* ================================
+   MEDIA QUERIES
+================================ */
+
+/* Tablets */
+@media (max-width: 900px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .navbar a {
+        padding: 6px 12px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+/* ================================
+   RESET GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Fondo principal */
+body {
+    background: url("img/sakura.gif") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Asegurar que los textos estén encima de los pétalos */
+body * {
+    position: relative;
+    z-index: 5;
+}
+
+/* ================================
+   HEADER + NAV
+================================ */
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.navbar a {
+    margin: 0 12px;
+    color: #1e2a38;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: #008cff;
+}
+
+.navbar .active {
+    color: #00d0ff;
+}
+
+/* ================================
+   SECCIONES GENERALES
+================================ */
+
+section {
+    padding: 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ================================
+   GALERÍA DE EVIDENCIAS — NUEVA
+================================ */
+
+/* Fondo suave */
+body.evidencias {
+    background: linear-gradient(135deg, #fdf1ff, #ffe5e5);
+}
+
+/* Contenedor general */
+.galeria {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 35px;
+
+    animation: fadeIn .8s ease-out;
+}
+
+/* Tarjetas */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: .3s ease;
+    cursor: pointer;
+    border: 2px solid #ffb5dd;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover anime */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(255,100,180,0.25);
+    border-color: #ff68c2;
+}
+
+/* Imagenes mejoradas */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: .3s ease-in-out;
+}
+
+/* Zoom elegante al pasar el mouse */
+.card:hover img {
+    transform: scale(1.07);
+}
+
+/* Texto */
+.card p {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 12px;
+    color: #333;
+}
+
+/* ================================
+   NAVBAR ESTILO GLASS PINK SAKURA
+================================ */
+
+header {
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 220, 240, 0.45);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 150, 210, 0.4);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 18px rgba(255, 120, 180, 0.25);
+}
+
+header h1 {
+    color: #6d0b45;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* NAVBAR LINKS */
+.navbar a {
+    color: #6d0b45;
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+
+    padding: 8px 14px;
+    border-radius: 10px;
+
+    transition: .3s ease;
+}
+
+/* Hover rosado */
+.navbar a:hover {
+    background: rgba(255, 150, 210, 0.25);
+    color: #ff2ba9;
+}
+
+/* Página activa */
+.navbar a.active {
+    background: rgba(255, 120, 200, 0.6);
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 120, 200, 0.4);
+}
+/* ================================
+   INTEGRANTES – ABANICO 3D
+================================ */
+
+.integrantes-section {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 40px;
+}
+
+.card-stack {
+    width: 190px;
+    height: 260px;
+    position: relative;
+    cursor: pointer;
+    transition: transform .3s;
+    transform-origin: bottom center;
+}
+
+/* Abanico inicial */
+.card-stack:nth-child(1) { transform: rotate(-15deg); }
+.card-stack:nth-child(2) { transform: rotate(0deg); }
+.card-stack:nth-child(3) { transform: rotate(15deg); }
+
+/* Hover: se levantan tipo carta Yugioh */
+.card-stack:hover {
+    transform: scale(1.12) translateY(-15px) rotate(0deg);
+    z-index: 10;
+}
+
+/* Imagen */
+.card-stack img {
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    transition: .3s;
+}
+
+.card-stack:hover img {
+    box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+}
+
+/* ================================
+   MODAL PARA DETALLES
+================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    animation: aparecer .3s ease;
+}
+
+.modal-content img {
+    width: 80%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    color: black;
+}
+
+@keyframes aparecer {
+    from { transform: scale(.7); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* ================================
+   LIGHTBOX (EVIDENCIAS)
+================================ */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 70vw;
+    max-height: 70vh;
+    border-radius: 15px;
+    object-fit: contain;
+    animation: zoom .3s ease;
+}
+
+@keyframes zoom {
+    from { transform: scale(.6); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* ================================
+   PÉTALOS SAKURA
+================================ */
+
+.petal {
+    position: fixed;
+    top: -10px;
+    width: 18px;
+    height: 18px;
+    background: pink;
+    opacity: 0.8;
+    border-radius: 150% 0 150% 0;
+    pointer-events: none;
+    animation: fall 6s linear infinite;
+    z-index: 1;
+}
+
+@keyframes fall {
+    0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    
+}
+/* Tematica */
+.tematica-section {
+    padding: 50px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tematica-bloque {
+    margin-bottom: 30px;
+    background: #fafafa;
+    padding: 20px 25px;
+    border-radius: 12px;
+    border-left: 6px solid #6d0b45;
+}
+
+.tematica-bloque h3 {
+    color: #6d0b45;
+    margin-bottom: 10px;
+}
+
+.tematica-bloque ul {
+    padding-left: 20px;
+}
+
+.tematica-bloque ul li {
+    margin-bottom: 8px;
+}
+
+/* logo de tematicas */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.logo {
+    cursor: pointer;
+}
+
+ /* ===== FOOTER ===== */
+    /* ===== FOOTER ===== */
+    footer {
+        background: #6d0b45;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 235px;
+    }
+
+    .sociales a {
+        color: #ffffff;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        width: 5px;  
+        font-size: 23px;
+    }
+
+    .sociales a:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        color: #000000;
+        
+    }
+
+    /* Pantallas grandes */
+@media (min-width: 1400px) {
+
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .card-stack {
+        width: 220px;
+        height: 300px;
+    }
+
+    .tematica-section {
+        max-width: 1200px;
+    }
+}
+
+
+

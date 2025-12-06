@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Temática - Comunicación ADSO</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- boostrap  *SOLO* para iconos en el footer-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <header class="header">
+
+
+        <h1>Temática Vista en la Formación</h1>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="tematica.html" class="active">Temática</a>
+            <a href="integrantes.html" id="btnIntegrantes">Integrantes</a>
+            <a href="evidencias.html">Evidencias</a>
+            <a href="reflexiones.html">Reflexiones</a>
+        </nav>
+    </header>
+
+    <section class="tematica-section">
+
+        <h2 class="titulo-seccion">Temas Vistos en la Competencia de Comunicación</h2>
+
+        <!-- 1. Concepto de comunicación -->
+        <div class="tematica-bloque">
+            <h3>Concepto de Comunicación</h3>
+            <p>
+                La comunicación es el proceso mediante el cual las personas intercambian información,
+                ideas, emociones y conocimientos. Es fundamental para establecer relaciones, resolver
+                problemas y trabajar de manera efectiva con otros.
+            </p>
+        </div>
+
+        <!-- 2. Tipos de comunicación -->
+        <div class="tematica-bloque">
+            <h3>Tipos de Comunicación</h3>
+
+            <ul>
+                <li>
+                    <strong>Comunicación verbal:</strong> Utiliza palabras habladas o escritas. Es directa
+                    y permite transmitir información clara y organizada.
+                </li>
+                <li>
+                    <strong>Comunicación no verbal:</strong> Se expresa con gestos, posturas,
+                    movimientos, miradas y expresiones. Aporta significado emocional y refuerza el mensaje verbal.
+                </li>
+                <li>
+                    <strong>Comunicación asertiva:</strong> Es comunicar ideas y emociones de forma
+                    respetuosa, clara y firme, sin agredir ni ser pasivo.
+                </li>
+            </ul>
+        </div>
+
+        <!-- 3. Barreras de la comunicación -->
+        <div class="tematica-bloque">
+            <h3>Barreras de la Comunicación</h3>
+            <p>
+                Las barreras dificultan que el mensaje llegue correctamente al receptor. Algunas de las
+                más comunes son:
+            </p>
+
+            <ul>
+                <li><strong>Barreras físicas:</strong> ruido, distancia, mala conexión, ambientes inadecuados.</li>
+                <li><strong>Barreras psicológicas:</strong> estrés, ansiedad, prejuicios o emociones fuertes.</li>
+                <li><strong>Barreras culturales:</strong> diferencias de lenguaje, valores o costumbres.</li>
+                <li><strong>Barreras semánticas:</strong> palabras confusas, tecnicismos o mensajes ambiguos.</li>
+            </ul>
+        </div>
+
+        <!-- 4. Escucha activa -->
+        <div class="tematica-bloque">
+            <h3>Escucha Activa</h3>
+            <p>
+                La escucha activa consiste en prestar atención completa al interlocutor, mostrando interés,
+                haciendo preguntas y ofreciendo retroalimentación. Mejora la comprensión y evita conflictos.
+            </p>
+        </div>
+
+        <!-- 5. Colaboración en equipos -->
+        <div class="tematica-bloque">
+            <h3>Colaboración en Equipos</h3>
+            <p>
+                La colaboración implica trabajar en conjunto para alcanzar un objetivo común. Requiere
+                comunicación clara, responsabilidad compartida, organización y respeto entre los integrantes.
+                La colaboración efectiva mejora el rendimiento y la calidad del trabajo.
+            </p>
+        </div>
+
+        <!-- 6. Comunicación en proyectos de software -->
+        <div class="tematica-bloque">
+            <h3>Comunicación en Proyectos de Software</h3>
+            <p>
+                En el desarrollo de software la comunicación es clave: permite coordinar tareas, entender
+                requerimientos, reportar errores y mantener a todo el equipo alineado. Un proyecto con mala
+                comunicación puede presentar fallos, retrasos y confusiones.
+            </p>
+        </div>
+
+    </section>
+    <script>
+        document.querySelectorAll(".zoomable").forEach(img => {
+            img.addEventListener("click", () => {
+                document.getElementById("lightbox-img").src = img.src;
+                document.getElementById("lightbox").style.display = "flex";
+            });
+        });
+
+        document.getElementById("lightbox").addEventListener("click", () => {
+            document.getElementById("lightbox").style.display = "none";
+        });
+    </script>
+
+
+    <!-- PÉTALOS SAKURA -->
+    <script>
+        function crearPetalo() {
+            const petal = document.createElement("div");
+            petal.classList.add("petal");
+            petal.style.left = Math.random() * window.innerWidth + "px";
+            petal.style.animationDuration = (5 + Math.random() * 3) + "s";
+            document.body.appendChild(petal);
+            setTimeout(() => petal.remove(), 8000);
+        }
+        setInterval(crearPetalo, 300);
+    </script>
+
+    </div>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="sociales" id="Contacto">
+
+
+            <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+
+        </div>
+
+        <p>&copy;2025 Todos los derechos reservados</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const btnIntegrantes = document.querySelector("#btnIntegrantes");
+
+            if (btnIntegrantes) {
+                btnIntegrantes.addEventListener("click", (e) => {
+                    e.preventDefault(); // Detiene la navegación inmediata
+
+                    Swal.fire({
+                        icon: "info",
+                        title: "Integrantes",
+                        text: "Por favor selecciona un integrante para ver más detalles.",
+                        confirmButtonColor: "#6d0b45",
+                        confirmButtonText: "Entendido"
+                    }).then(() => {
+
+                        // Ahora sí redirige automáticamente
+                        window.location.href = "integrantes.html";
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
+
+</body>
+
+</html>
